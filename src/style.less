@@ -1,0 +1,272 @@
+@blueBorder: #0767B3;
+.__gda_sdk {
+
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+
+  a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+  button {
+    // border-radius: 8px;
+    // border: 1px solid transparent;
+    // padding: 0.6em 1.2em;
+    // font-size: 1em;
+    // font-weight: 500;
+    // font-family: inherit;
+    // background-color: #1a1a1a;
+    // cursor: pointer;
+    // transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    // outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .card {
+    padding: 2em;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      // background-color: #f9f9f9;
+    }
+  }
+
+  .bf-toolbar.bf-toolbar-bottom {
+    left: 50%!important;
+    transform: translate(-50%)!important;
+    right: auto!important;
+  }
+
+  // 复写 messagebox 样式，交换 确认和取消按钮的位置
+  .my_message_box {
+    .el-message-box__btns {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      .el-button{
+        margin-left: 10px;
+        width: 120px;
+        border-radius: 2px;
+
+        border-color: #0767b3;
+        border-width: 1px;
+        color: #0767b3;
+        &:hover{
+          border-color: #0767b3;
+          border-width: 1px;
+        }
+
+        &.el-button--primary{
+          background-color: #0767b3;
+          color: #fff;
+          border-color: #0767b3;
+        }
+        &.el-button--default{
+          border-color: #0767b3;
+          border-width: 1px;
+          color: #0767b3;
+        }
+      }
+    }
+
+    .el-icon.el-message-box__status{
+      font-size: 36px !important;
+      color: #ff9e00 !important;
+    }
+    .el-message-box__message{
+      padding-left: 48px !important;
+    }
+  }
+
+  // 全局滚动条样式
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #DCDEE3;
+    border-radius: 10px;
+    -webkit-box-shadow: rgba(0,0,0,.1);
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+
+  /* 建筑专业特殊符号字体库 */
+  @font-face {
+    font-family: SJQY;
+    src: url('../style/sjqyfont/SJQY.ttf');
+  }
+
+  .my_select_type1.el-select {
+    .el-input__wrapper{
+      padding: 0px;
+      border: 1px solid #373841;
+      .el-input__inner:hover{
+        border: none
+      }
+    }
+    .el-input__wrapper:hover{
+      border: 1px solid @blueBorder
+    }
+  }
+  
+  .my_input_type1.el-input,.my_input_type1.el-textarea{
+    .el-input__inner{
+      border: none;
+    }
+    .el-input__inner,.el-textarea__inner{
+      color: rgba(255, 255, 255, 0.67);
+      padding-left: 6px;
+    }
+    .el-input__wrapper{
+      padding: 0px;
+      border: 1px solid #373841;
+      .el-input__inner:hover{
+        border: none
+      }
+    }
+    .el-input__wrapper:hover,.el-textarea__inner:hover{
+      border: 1px solid @blueBorder;
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+  .my_input_type1.el-autocomplete{
+    .el-input__wrapper{
+      padding: 0px;
+      border: 1px solid #373841;
+      .el-input__inner:hover{
+        border: none
+      }
+    }
+    .el-input__wrapper:hover{
+      border: 1px solid @blueBorder;
+    }
+  }
+  .my_input_type1.el-input:not(.is-disabled){
+    .el-input__inner:hover{
+      border: none;
+    }
+  }
+  .my_input_type1.el-autocomplete:not(.is-disabled){
+    .el-input__inner:hover{
+      border: none;
+    }
+  }
+  .my_input_type1.el-textarea:not(.is-disabled){
+    .el-input__inner:hover{
+      border: none;
+    }
+  }
+
+  .el-table--fit{
+    border: none !important;
+  }
+
+  .__hide_markup_pen{
+    .bf-button.gld-bf-notes {
+      display: none !important;
+    }
+  }
+
+}
+
+.model_review.__nest .sub_w{
+  .model_view{
+    .bf-house{
+      width: 70px !important;
+      height: 70px !important;
+      .bf-menu-svg{
+        top: 55px !important;
+        right: -17px;
+      }
+      .bf-home-svg{
+        top: 16px !important;
+        right: -17px !important;
+      }
+      canvas {
+        width: 70px !important;
+        height: 70px !important;
+      }
+    }
+    .bf-tree-toolbar{
+      display: none;
+    }
+  }
+}
+.model_review.__split .sub_w{
+  .bf-house{
+    top: 40px;
+    right: 80px;
+  }
+}
+.model_review .sub_w{
+  .model_view{
+    .bf-house{
+      width: 100px !important;
+      height: 100px !important;
+      canvas {
+        position: relative;
+        width: 90px !important;
+        height: 90px !important;
+      }
+    }
+    .bf-menu{
+      right: 68px;
+      top: 166px;
+    }
+  }
+}
+
+.__primary_btn_loading{
+  opacity: 0.8;
+}
