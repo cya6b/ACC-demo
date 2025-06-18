@@ -1,0 +1,199 @@
+/* Copyright (C) <1998-2024> Glodon Company Limited
+ * Licensed under the MIT License
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+@textColor: #f2f2f8;
+@backgroundColor: #282a34;
+@boxShadow: 0 0 0 1px #3e3e43 inset;
+@borderColor: #373841;
+@font-size: 14px;
+
+@black: #282A34;
+@color-light: #fff;
+@color-darkness: #D1D1D1;
+@blue: #126BFF;
+@blueBorder: #0767B3;
+@font-weight: 500;
+@line-height-normal: 20px;
+.font-normal {
+  font-size: @font-size;
+  line-height: @line-height-normal;
+  color: @textColor
+}
+:deep(.el-form-item__label) {
+  color: @textColor
+}
+:deep(.el-form-item__content) {
+  .el-input,.el-autocomplete {
+    width: 100%;
+    .el-input__inner {
+      color: #f2f2f8;
+      border-color: @borderColor;
+      background: @backgroundColor;
+      &:hover {
+        border-color: #f2f2f8;
+      }
+    }
+    &.is-disabled {
+      .el-input__inner {
+        background: @backgroundColor;
+      }
+    }
+  }
+
+  .el-input__wrapper{
+    box-shadow: @boxShadow;
+    color: @textColor;
+    background: @backgroundColor;
+  }
+  .el-textarea {
+    textarea {
+      &:hover {
+        border-color: #f2f2f8;
+      }
+      box-shadow: @boxShadow;
+      border-color: @borderColor;
+      background: #101010;
+      color: @textColor;
+    }
+
+    .el-input__count{
+      background: none;
+      color: @textColor;
+    }
+  }
+
+  .el-select{
+    width: 100%;
+
+    .el-select-dropdown {
+      left: 0 !important;
+      color: @textColor;
+      background-color: @backgroundColor;
+      box-shadow: @boxShadow;
+      border: none;
+      width: 100%;
+
+      .el-select-dropdown__item {
+        color: @textColor;
+
+        &.hover {
+          background-color: rgba(18, 107, 255, 0.1);
+        }
+        &:hover {
+          background-color: rgba(18, 107, 255, 0.1);
+        }
+
+        &.selected {
+          background-color: rgba(18, 107, 255, 0.3);
+        }
+      }
+
+      .popper__arrow {
+        border-bottom-color: @backgroundColor;
+
+        &::after {
+          border-bottom-color: inherit;
+        }
+      }
+    }
+
+    .el-select-dropdown__empty {
+      color: @textColor;
+      background-color: @backgroundColor;
+    }
+
+    .el-select__popper.el-popper {
+      border-color: @borderColor;
+    }
+
+    .el-select__popper.el-popper .el-popper__arrow::before {
+      background: none;
+      border-color: @borderColor;
+    }
+  }
+
+  .el-select__tags {
+    .el-tag {
+      line-height: 18px;
+      height: 20px;
+      background: rgba(84, 86, 100, 1);
+      border-radius: 2px;
+      color: rgba(255, 255, 255, 1);
+      .el-select__tags-text {
+        color: rgba(255, 255, 255, 1);
+      }
+      .el-tag__close.el-icon-close {
+        filter: invert(100%);
+        background-color: rgba(24, 24, 30, 1);
+        color: #f2f2f8;
+        right: -4px;
+        top: -1px;
+      }
+    }
+  }
+
+  .el-select-dropdown.el-popper.dark {
+    background: #40424C;
+    border-color:#40424C;
+    .popper__arrow {
+      border-bottom-color: #40424C;
+      &::after {
+        border-bottom-color: #40424C;
+      }
+    }
+    .el-select-dropdown__item {
+      color:rgba(242, 242, 248, 1);
+      &.selected {
+        background: rgba(18, 107, 255, 0.3);
+      }
+      &:hover {
+        background: rgba(18, 107, 255, 0.1);
+      }
+      &.hover {
+        color:rgba(242, 242, 248, 1);
+        background: rgba(18, 107, 255, 0.1);
+      }
+    }
+  }
+
+  .el-table{
+    thead, tr {
+      color: @textColor;
+    }
+    background-color: @backgroundColor;
+    tr{
+      background-color: @backgroundColor;
+    }
+    th.el-table__cell,tr.el-table__cell{
+      background-color: @backgroundColor;
+      border-color: @borderColor;
+    }
+    .el-table__border-left-patch,.el-table__border-left-patch:after{
+      background-color: @borderColor;
+    }
+  }
+  .el-table--border .el-table__inner-wrapper::after, .el-table--border::after, .el-table--border::before, .el-table__inner-wrapper::before {
+    background-color: @borderColor;
+  }
+
+  .el-tabs__item{
+    color: @textColor;
+  }
+
+  .el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf {
+    border-bottom: 1px solid @borderColor;
+  }
+  .el-table--border .el-table__cell {
+    border-right: 1px solid @borderColor;
+  } 
+
+  .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell{
+    background-color: #373944;
+  }
+  .el-table__body tr.current-row>td.el-table__cell{
+    background-color: #373944;
+  }
+}
