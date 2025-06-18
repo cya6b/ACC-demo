@@ -1,0 +1,36 @@
+@black: #282A34;
+@color-light: #fff;
+@color: #F2F2F8;
+@color-darkness: #D1D1D1;
+@font-size: 14px;
+@blue: #126BFF;
+@font-weight: 500;
+@line-height-normal: 20px;
+
+.font-normal {
+    font-size: @font-size;
+    line-height: @line-height-normal;
+    color: @color
+}
+
+.font-hover {
+    color: @color-light
+}
+
+@commentPanelWidth: calc(100% - 48px);
+
+.scroll-bar {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #40424c;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #545664;
+        border-radius: 4px;
+    }
+}
